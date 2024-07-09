@@ -34,15 +34,15 @@ animals4[1] = "tiger";
 console.log(animals4);
 
 /* 7 */
-let a = [1,2,3]; 
-let b = [4,5,6]; 
+let a = [1,2,3];
+let b = [4,5,6];
 /* Sätt ihop ovanstående arrayer. */
 let join = [...a, ...b];
 console.log(join);
 
 /* 8 */
-let a2 = [1,2,3,7,8,9]; 
-let b2 = [4,5,6]; 
+let a2 = [1,2,3,7,8,9];
+let b2 = [4,5,6];
 /* Merga in array b på index 3 i array a.. */
 a2.splice(3, 0, ...b2);
 console.log(a2);
@@ -54,7 +54,7 @@ let cloneArr = [...arr];
 console.log(arr, cloneArr);
 
 /* 10 */
-let fruits = ['kiwi', 'apple', 'pear']; 
+let fruits = ['kiwi', 'apple', 'pear'];
 /* Lägg till en frukt i slutet av arrayen ovan. */
 fruits.push('banana');
 console.log(fruits);
@@ -72,13 +72,13 @@ fruits3.pop();
 console.log(fruits3);
 
 /* 13 */
-let fruits4 = ['kiwi', 'apple', 'pear']; 
+let fruits4 = ['kiwi', 'apple', 'pear'];
 /* I arrayen ovan, ta bort första frukten i arrayen. */
 fruits4.shift();
 console.log(fruits4);
 
 /* 14 */
-let fruits5 = ['kiwi', 'apple', 'pear']; 
+let fruits5 = ['kiwi', 'apple', 'pear'];
 /* Sätt in en frukt i arrayen ovan på index 1. */
 fruits5.splice(1, 0, "banana");
 console.log(fruits5);
@@ -108,7 +108,7 @@ let str = 'Supercalifragilisticexpialidocious';
 console.log(str.includes('n'));
 
 /* 19 */
-let str2 = 'Supercalifragilisticexpialidocious'; 
+let str2 = 'Supercalifragilisticexpialidocious';
 /* Kika om strängen ovan innehåller bokstaven x. */
 console.log(str2.includes('x'));
 
@@ -137,7 +137,7 @@ let overFive = numArray.filter((num) => num > 5);
 console.log(overFive);
 
 /* 24 */
-let numArray2 = [23, 45, 5, 62, 1, 21, 3, 54]; 
+let numArray2 = [23, 45, 5, 62, 1, 21, 3, 54];
 /* I arrayen ovan, filtera fram alla nummer under 5. Tips: Läs dokumentationen för filter() */
 let underFive = numArray.filter((num) => num < 5);
 console.log(underFive);
@@ -174,7 +174,6 @@ persons.filter(person => person.age >= 18).forEach(person => {
     console.log(person.name);
 });
 
-
 /* 26 */
 /* Skriv ut alla namn som är under 18 år från arrayen längst upp i dokumentet. */
 persons.filter(person => person.age < 18).forEach(person => {
@@ -205,11 +204,10 @@ console.log(persons.sort((a, b) => a.name.localeCompare(b.name)));
 
 /* 32 */
 /* I person-arrayen längst upp i dokumentet, gör om alla namn till versaler. */
-persons.forEach(person => { 
+persons.forEach(person => {
     person.name = person.name.toUpperCase();
 });
 console.log(persons);
-
 
 /* 33 */
 /* I person-arrayen längst upp i dokumentet, spegelvänd alla namn. */
@@ -217,7 +215,7 @@ function reverseString(str){
     return str.split('').reverse().join('');
 }
 
-persons.forEach(person => { 
+persons.forEach(person => {
     person.name = reverseString(person.name);
 });
 console.log(persons);
@@ -225,27 +223,35 @@ console.log(persons);
 /* 34 */
 let fruits7 = ['apelsin', 'päron', 'äpple', 'kiwi'];
 /* Loopa ut följande array med en forEach()-loop. console.log() varje ord. */
+console.log('Uppgift 34');
 fruits7.forEach(fruit => {
    console.log(fruit);
 });
 
-
 /* 35 */
-/* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
+let fruits8 = ['apelsin', 'päron', 'äpple', 'kiwi'];
 /* Loopa ut följande array med en for of-loop. console.log() varje ord. */
 console.log('Uppgift 35');
+for (let fruit of fruits8){
+    console.log(fruit);
+}
 
 /* 36 */
-/* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
+let fruits9 = ["apelsin", "päron", "äpple", "kiwi"];
 /* Loopa ut följande array med en for-loop. console.log() varje ord. */
-console.log('Uppgift 36');
+console.log("Uppgift 36");
+for (let i = 0; i < fruits9.length; i++) {
+  console.log(fruits9[i]);
+}
 
 /* 37 */
-/* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
+let fruitsLast = ["apelsin", "päron", "äpple", "kiwi"];
 /* Loopa ut följande array. För varje varv i loopen ska du också skriva ut index. ex: */
 /* 0 - apelsin */
 /* 1 - päron */
 /* 2 - äpple */
 /* osv... */
-console.log('Uppgift 37');
-
+console.log("Uppgift 37");
+for (let i = 0; i < fruitsLast.length; i++) {
+  console.log(`${i} - ${fruitsLast[i]}`);
+}
