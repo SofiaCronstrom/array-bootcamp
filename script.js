@@ -30,68 +30,82 @@ let persons = [
 
 /* 1 */
 /* Gör en array som innehåller 5 st olika frukter av datatypen string. */
-console.log('Uppgift 1');
+let fruitArr = ["apple", "banana", "orange", "pinapple", "strawberry"];
+console.log(fruitArr);
 
 /* 2 */
 /* Gör en array som innehåller 3 olika datatyper, ex. string, number, array. */
-console.log('Uppgift 2');
+let datatypeArr = ["hello", 23, false];
+console.log(datatypeArr);
 
 /* 3 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* console.log() hur många objekt arrayen ovan innehåller. */
-console.log('Uppgift 3');
+let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua']
+console.log(animals.length);
 
 /* 4 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, hämta cat. */
-console.log('Uppgift 4');
+let animals2 = ['cat', 'hamster', 'parrot', 'funky chihuahua'];
+console.log(animals2[0]);
 
 /* 5 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, hämta funky chihuahua. */
-console.log('Uppgift 5');
+let animals3 = ['cat', 'hamster', 'parrot', 'funky chihuahua'];
+console.log('Uppgift 5 ' + animals3[3]);
 
 /* 6 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, byt ut hamster mot tiger. */
-console.log('Uppgift 6');
+let animals4 = ['cat', 'hamster', 'parrot', 'funky chihuahua'];
+animals4[1] = "tiger";
+console.log(animals4);
 
 /* 7 */
-/* let a = [1,2,3]; */
-/* let b = [4,5,6]; */
+let a = [1,2,3]; 
+let b = [4,5,6]; 
 /* Sätt ihop ovanstående arrayer. */
-console.log('Uppgift 7');
+let join = [...a, ...b];
+console.log(join);
 
 /* 8 */
-/* let a = [1,2,3,7,8,9]; */
-/* let b = [4,5,6]; */
+let a2 = [1,2,3,7,8,9]; 
+let b2 = [4,5,6]; 
 /* Merga in array b på index 3 i array a.. */
-console.log('Uppgift 8');
+a2.splice(3, 0, ...b2);
+console.log(a2);
 
 /* 9 */
-/* let arr = ['a', 'b', 'c']; */
+let arr = ['a', 'b', 'c'];
+let cloneArr = [...arr];
 /* Klona ovanstående array. */
-console.log('Uppgift 9');
+console.log(arr, cloneArr);
 
 /* 10 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits = ['kiwi', 'apple', 'pear']; 
 /* Lägg till en frukt i slutet av arrayen ovan. */
-console.log('Uppgift 10');
+fruits.push('banana');
+console.log(fruits);
 
 /* 11 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits2 = ['kiwi', 'apple', 'pear'];
 /* Lägg till en frukt i början av arrayen ovan. */
-console.log('Uppgift 11');
+fruits2.unshift("banana");
+console.log(fruits2);
 
 /* 12 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits3 = ['kiwi', 'apple', 'pear'];
 /* I arrayen ovan, ta bort sista frukten i arrayen. */
-console.log('Uppgift 12');
+fruits3.pop();
+console.log(fruits3);
 
 /* 13 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits4 = ['kiwi', 'apple', 'pear']; 
 /* I arrayen ovan, ta bort första frukten i arrayen. */
-console.log('Uppgift 13');
+fruits4.shift();
+console.log(fruits4);
 
 /* 14 */
 /* let fruits = ['kiwi', 'apple', 'pear']; */
