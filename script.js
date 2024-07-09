@@ -1,33 +1,3 @@
-//Array innehållandes flera objekt
-let persons = [
-    {
-        name: "Felicia",
-        age: 12
-    },
-    {
-        name: "Pelle",
-        age: 20
-    },
-    {
-        name: "Peter",
-        age: 59
-    },
-    {
-        name: "Anna",
-        age: 32
-    },
-    {
-        name: "Jocke",
-        age: 18
-    },
-    {
-        name: "Ella",
-        age: 3
-    }
-]
-
-
-
 /* 1 */
 /* Gör en array som innehåller 5 st olika frukter av datatypen string. */
 let fruitArr = ["apple", "banana", "orange", "pinapple", "strawberry"];
@@ -108,61 +78,97 @@ fruits4.shift();
 console.log(fruits4);
 
 /* 14 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits5 = ['kiwi', 'apple', 'pear']; 
 /* Sätt in en frukt i arrayen ovan på index 1. */
-console.log('Uppgift 14');
+fruits5.splice(1, 0, "banana");
+console.log(fruits5);
 
 /* 15 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+let fruits6 = ['kiwi', 'apple', 'pear'];
 /* Sätt in, tre frukter i arrayen ovan på index 2. */
-console.log('Uppgift 15');
+fruits6.splice(1, 0, "banana", "orange", "lemon");
+console.log(fruits6);
 
 /* 16 */
-/* let names = ['David', 'Christoffer', 'Johan', 'Maja'] */
+let names = ['David', 'Christoffer', 'Johan', 'Maja'];
 /* I arrayen ovan, ta bort Christoffer och Johan. */
-console.log('Uppgift 16');
+names.splice(1, 2);
+console.log(names);
 
 /* 17 */
-/* let nums = [1,2,3,4,5,6,7,8,9]; */
+let nums = [1,2,3,4,5,6,7,8,9];
 /* Spegelvänd på arrayen ovan. */
-console.log('Uppgift 17');
+nums.reverse();
+console.log(nums);
 
 /* 18 */
-/* let str = 'Supercalifragilisticexpialidocious'; */
+let str = 'Supercalifragilisticexpialidocious';
 /* Kika om strängen ovan innehåller bokstaven n. */
-console.log('Uppgift 18');
+
+console.log(str.includes('n'));
 
 /* 19 */
-/* let str = 'Supercalifragilisticexpialidocious'; */
+let str2 = 'Supercalifragilisticexpialidocious'; 
 /* Kika om strängen ovan innehåller bokstaven x. */
-console.log('Uppgift 19');
+console.log(str2.includes('x'));
 
 /* 20 */
-/* let str = 'Supercalifragilisticexpialidocious'; */
+let str3 = 'Supercalifragilisticexpialidocious';
 /* I ovanstående sträng, hitta vilket position första förekomsten av p har. */
-console.log('Uppgift 20');
+console.log(str3.indexOf('p')
+);
 
 /* 21 */
-/* let str = 'Supercalifragilisticexpialidocious'; */
+let str4 = 'Supercalifragilisticexpialidocious';
 /* I strängen ovan, plocka fram de 5 första tecknena. */
-console.log('Uppgift 21');
+let subStr = str4.slice(0, 5);
+console.log(subStr);
 
 /* 22 */
-/* let str = 'Supercalifragilisticexpialidocious'; */
+let str5 = 'Supercalifragilisticexpialidocious';
 /* I strängen ovan, plocka fram de 7 sista tecknena. */
-console.log('Uppgift 22');
+let subStr2 = str5.slice(-7);
+console.log(subStr2);
 
 /* 23 */
-/* let numArray = [23, 45, 5, 62, 1, 21, 3, 54]; */
+let numArray = [23, 45, 5, 62, 1, 21, 3, 54];
 /* I arrayen ovan, filtera fram alla nummer över 5. Tips: Läs dokumentationen för filter() */
-console.log('Uppgift 23');
+let overFive = numArray.filter((num) => num > 5);
+console.log(overFive);
 
 /* 24 */
-/* let numArray = [23, 45, 5, 62, 1, 21, 3, 54]; */
+let numArray2 = [23, 45, 5, 62, 1, 21, 3, 54]; 
 /* I arrayen ovan, filtera fram alla nummer under 5. Tips: Läs dokumentationen för filter() */
-console.log('Uppgift 24');
+let underFive = numArray.filter((num) => num < 5);
+console.log(underFive);
 
 /* 25 */
+let persons = [
+    {
+        name: "Felicia",
+        age: 12
+    },
+    {
+        name: "Pelle",
+        age: 20
+    },
+    {
+        name: "Peter",
+        age: 59
+    },
+    {
+        name: "Anna",
+        age: 32
+    },
+    {
+        name: "Jocke",
+        age: 18
+    },
+    {
+        name: "Ella",
+        age: 3
+    }
+]
 /* Skriv ut alla namn som är 18 år eller över från arrayen längst upp i dokumentet. */
 console.log('Uppgift 25');
 
