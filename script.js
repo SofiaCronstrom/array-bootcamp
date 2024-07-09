@@ -170,46 +170,65 @@ let persons = [
     }
 ]
 /* Skriv ut alla namn som är 18 år eller över från arrayen längst upp i dokumentet. */
-console.log('Uppgift 25');
+persons.filter(person => person.age >= 18).forEach(person => {
+    console.log(person.name);
+});
+
 
 /* 26 */
 /* Skriv ut alla namn som är under 18 år från arrayen längst upp i dokumentet. */
-console.log('Uppgift 26');
+persons.filter(person => person.age < 18).forEach(person => {
+    console.log(person.name);
+});
 
 /* 27 */
-/* let arr = ['beta', 'alfa', 'gamma']; */
+let arr2 = ['beta', 'alfa', 'gamma'];
 /* Sortera ovanstående array alfabetisk. Tips: Läs dokumentattionen för sort() */
-console.log('Uppgift 27');
+console.log(arr2.sort());
 
 /* 28 */
-/* let nums = [1,5,7,9,3,4,2,6,8]; */
+let nums2 = [1,5,7,9,3,4,2,6,8];
 /* Sortera ovanstående array numeriskt. */
-console.log('Uppgift 28');
+console.log(nums2.sort());
 
 /* 29 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten efter ålder, yngst först. */
-console.log('Uppgift 29');
+console.log(persons.sort((a, b) => a.age - b.age));
 
 /* 30 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten efter ålder, äldst först. */
-console.log('Uppgift 30');
+console.log(persons.sort((a, b) => b.age - a.age));
 
 /* 31 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten i bokstavsordning efter deras namn */
-console.log('Uppgift 31');
+console.log(persons.sort((a, b) => a.name.localeCompare(b.name)));
 
 /* 32 */
 /* I person-arrayen längst upp i dokumentet, gör om alla namn till versaler. */
-console.log('Uppgift 32');
+persons.forEach(person => { 
+    person.name = person.name.toUpperCase();
+});
+console.log(persons);
+
 
 /* 33 */
 /* I person-arrayen längst upp i dokumentet, spegelvänd alla namn. */
-console.log('Uppgift 33');
+function reverseString(str){
+    return str.split('').reverse().join('');
+}
+
+persons.forEach(person => { 
+    person.name = reverseString(person.name);
+});
+console.log(persons);
 
 /* 34 */
-/* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
+let fruits7 = ['apelsin', 'päron', 'äpple', 'kiwi'];
 /* Loopa ut följande array med en forEach()-loop. console.log() varje ord. */
-console.log('Uppgift 34');
+fruits7.forEach(fruit => {
+   console.log(fruit);
+});
+
 
 /* 35 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
